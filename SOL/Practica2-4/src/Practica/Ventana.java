@@ -60,6 +60,9 @@ public class Ventana extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Campo_texto_inverso.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                Campo_texto_inversoKeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 Campo_texto_inversoKeyTyped(evt);
             }
@@ -71,6 +74,9 @@ public class Ventana extends javax.swing.JFrame {
             }
         });
         Campo_texto_correo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                Campo_texto_correoKeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 Campo_texto_correoKeyTyped(evt);
             }
@@ -121,11 +127,33 @@ public class Ventana extends javax.swing.JFrame {
         Texto_correo.setText("Correo");
 
         Combobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        Combobox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComboboxActionPerformed(evt);
+            }
+        });
 
-        Boton_toggle.setIcon(new javax.swing.ImageIcon("C:\\Users\\DAM2_09\\Documents\\GitHub\\pr-ctica-2-4-elementos-interfaz-mixta-Willsongamf\\SOL\\Practica2-4\\src\\Practica\\b_off.png")); // NOI18N
+        Slider.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                SliderStateChanged(evt);
+            }
+        });
+
+        Boton_toggle.setIcon(new javax.swing.ImageIcon("C:\\Users\\DAM2_09\\Documents\\GitHub\\pr-ctica-2-4-elementos-interfaz-mixta-Willsongamf\\b_off.png")); // NOI18N
         Boton_toggle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Boton_toggleActionPerformed(evt);
+            }
+        });
+
+        Spinner.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                SpinnerStateChanged(evt);
+            }
+        });
+        Spinner.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SpinnerMouseClicked(evt);
             }
         });
 
@@ -137,7 +165,7 @@ public class Ventana extends javax.swing.JFrame {
 
         Slider1_I.setEnabled(false);
 
-        Boton_toggle1_I.setIcon(new javax.swing.ImageIcon("C:\\Users\\DAM2_09\\Documents\\GitHub\\pr-ctica-2-4-elementos-interfaz-mixta-Willsongamf\\SOL\\Practica2-4\\src\\Practica\\b_off.png")); // NOI18N
+        Boton_toggle1_I.setIcon(new javax.swing.ImageIcon("C:\\Users\\DAM2_09\\Documents\\GitHub\\pr-ctica-2-4-elementos-interfaz-mixta-Willsongamf\\SOL\\Practica2-4\\Imagenes\\b_off.png")); // NOI18N
         Boton_toggle1_I.setEnabled(false);
 
         Spinner1_I.setEnabled(false);
@@ -368,14 +396,15 @@ public class Ventana extends javax.swing.JFrame {
     }//GEN-LAST:event_Campo_texto_correoActionPerformed
 
     private void Campo_texto_correoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Campo_texto_correoKeyTyped
-
-        Campo_texto_correo1_I.setText(Campo_texto_correo.getText());
+     
+        
+       
     }//GEN-LAST:event_Campo_texto_correoKeyTyped
 
     private void Boton_toggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_toggleActionPerformed
         Boton_toggle1_I.setSelected(Boton_toggle.isSelected());
-        ImageIcon imagen_activada = new ImageIcon("./b_on.png");
-        ImageIcon imagen_desactivada = new ImageIcon("C:\\Users\\DAM2_09\\Documents\\GitHub\\pr-ctica-2-4-elementos-interfaz-mixta-Willsongamf\\SOL\\Practica2-4\\src\\Practica\\b_off.png");
+        ImageIcon imagen_activada = new ImageIcon("./Imagenes/b_on.png");
+        ImageIcon imagen_desactivada = new ImageIcon(".\\Imagenes\\b_off.png");
         if (Boton_toggle.isSelected()) {
             Boton_toggle.setIcon(imagen_activada);
             Boton_toggle1_I.setIcon(imagen_activada);
@@ -388,10 +417,37 @@ public class Ventana extends javax.swing.JFrame {
     }//GEN-LAST:event_Boton_toggleActionPerformed
 
     private void Campo_texto_inversoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Campo_texto_inversoKeyTyped
-        String inverso = "";
-        inverso = Campo_texto_correo.getText() + inverso;
-        Campo_texto_correo1_I.setText(inverso);
+       
+       
     }//GEN-LAST:event_Campo_texto_inversoKeyTyped
+
+    private void Campo_texto_correoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Campo_texto_correoKeyReleased
+       Campo_texto_correo1_I.setText(Campo_texto_correo.getText());
+    }//GEN-LAST:event_Campo_texto_correoKeyReleased
+
+    private void Campo_texto_inversoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Campo_texto_inversoKeyReleased
+        String inverso = "";
+        for (int i = Campo_texto_inverso.getText().length() - 1; i >= 0; i--) {
+            inverso = inverso + Campo_texto_inverso.getText().charAt(i);
+        }
+        Campo_texto_inverso1_I.setText(inverso);
+    }//GEN-LAST:event_Campo_texto_inversoKeyReleased
+
+    private void ComboboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboboxActionPerformed
+        Combobox1_I.setSelectedIndex(Combobox.getSelectedIndex());
+    }//GEN-LAST:event_ComboboxActionPerformed
+
+    private void SpinnerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SpinnerMouseClicked
+      
+    }//GEN-LAST:event_SpinnerMouseClicked
+
+    private void SpinnerStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_SpinnerStateChanged
+        Spinner1_I.setValue(Spinner.getValue());
+    }//GEN-LAST:event_SpinnerStateChanged
+
+    private void SliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_SliderStateChanged
+      Slider1_I.setValue(Slider.getValue());
+    }//GEN-LAST:event_SliderStateChanged
 
     /**
      * @param args the command line arguments

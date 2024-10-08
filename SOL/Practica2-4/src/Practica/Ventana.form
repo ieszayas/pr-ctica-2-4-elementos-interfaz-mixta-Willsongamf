@@ -244,12 +244,14 @@
   <SubComponents>
     <Component class="javax.swing.JTextField" name="Campo_texto_inverso">
       <Events>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Campo_texto_inversoKeyReleased"/>
         <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Campo_texto_inversoKeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="Campo_texto_correo">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Campo_texto_correoActionPerformed"/>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Campo_texto_correoKeyReleased"/>
         <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Campo_texto_correoKeyTyped"/>
       </Events>
     </Component>
@@ -317,16 +319,22 @@
           </StringArray>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ComboboxActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
     <Component class="javax.swing.JSlider" name="Slider">
+      <Events>
+        <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="SliderStateChanged"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JToggleButton" name="Boton_toggle">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\DAM2_09\Documents\GitHub\pr-ctica-2-4-elementos-interfaz-mixta-Willsongamf\SOL\Practica2-4\src\Practica\b_off.png"/>
+          <Image iconType="2" name="C:\Users\DAM2_09\Documents\GitHub\pr-ctica-2-4-elementos-interfaz-mixta-Willsongamf\b_off.png"/>
         </Property>
       </Properties>
       <Events>
@@ -334,6 +342,10 @@
       </Events>
     </Component>
     <Component class="javax.swing.JSpinner" name="Spinner">
+      <Events>
+        <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="SpinnerStateChanged"/>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="SpinnerMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="Texto_correo1_I">
       <Properties>
@@ -365,7 +377,7 @@
     <Component class="javax.swing.JToggleButton" name="Boton_toggle1_I">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\DAM2_09\Documents\GitHub\pr-ctica-2-4-elementos-interfaz-mixta-Willsongamf\SOL\Practica2-4\src\Practica\b_off.png"/>
+          <Image iconType="2" name="C:\Users\DAM2_09\Documents\GitHub\pr-ctica-2-4-elementos-interfaz-mixta-Willsongamf\SOL\Practica2-4\Imagenes\b_off.png"/>
         </Property>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
