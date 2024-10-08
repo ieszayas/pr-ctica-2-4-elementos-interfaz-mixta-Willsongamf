@@ -1,21 +1,20 @@
-
 package Practica;
 
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 
 public class Ventana extends javax.swing.JFrame {
 
-  
     public Ventana() {
         initComponents();
-        
+
         buttonGroup1.add(Radio_op1);
-         buttonGroup1.add(Radio_op2);
-          buttonGroup1.add(Radio_op3);
-          
-          
-          buttonGroup2.add(Radio_op1_I);
-          buttonGroup2.add(Radio_op2_I);
-          buttonGroup2.add(Radio_op3_I);
+        buttonGroup1.add(Radio_op2);
+        buttonGroup1.add(Radio_op3);
+
+        buttonGroup2.add(Radio_op1_I);
+        buttonGroup2.add(Radio_op2_I);
+        buttonGroup2.add(Radio_op3_I);
     }
 
     /**
@@ -55,8 +54,27 @@ public class Ventana extends javax.swing.JFrame {
         Check_op4_I = new javax.swing.JCheckBox();
         Check_op5_I = new javax.swing.JCheckBox();
         Check_op6_I = new javax.swing.JCheckBox();
+        jPanel1 = new javax.swing.JPanel();
+        jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        Campo_texto_inverso.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Campo_texto_inversoKeyTyped(evt);
+            }
+        });
+
+        Campo_texto_correo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Campo_texto_correoActionPerformed(evt);
+            }
+        });
+        Campo_texto_correo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                Campo_texto_correoKeyTyped(evt);
+            }
+        });
 
         Radio_op1.setText("Opcion 1");
         Radio_op1.addActionListener(new java.awt.event.ActionListener() {
@@ -105,6 +123,11 @@ public class Ventana extends javax.swing.JFrame {
         Combobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         Boton_toggle.setIcon(new javax.swing.ImageIcon("C:\\Users\\DAM2_09\\Documents\\GitHub\\pr-ctica-2-4-elementos-interfaz-mixta-Willsongamf\\SOL\\Practica2-4\\src\\Practica\\b_off.png")); // NOI18N
+        Boton_toggle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_toggleActionPerformed(evt);
+            }
+        });
 
         Texto_correo1_I.setText("Correo");
         Texto_correo1_I.setEnabled(false);
@@ -141,6 +164,17 @@ public class Ventana extends javax.swing.JFrame {
         Check_op6_I.setText("Opcion 6");
         Check_op6_I.setEnabled(false);
 
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 13, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -169,7 +203,7 @@ public class Ventana extends javax.swing.JFrame {
                                 .addComponent(Spinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(226, 226, 226)
+                        .addGap(304, 304, 304)
                         .addComponent(Texto_correo)
                         .addGap(44, 44, 44)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -183,41 +217,43 @@ public class Ventana extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(14, 14, 14)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(Radio_op2_I)
+                            .addComponent(Radio_op1_I)
+                            .addComponent(Radio_op3_I))
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(Radio_op2_I)
-                                    .addComponent(Radio_op1_I)
-                                    .addComponent(Radio_op3_I))
+                                .addComponent(Check_op4_I)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(Campo_texto_inverso1_I, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(Check_op4_I)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(Campo_texto_inverso1_I, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(Slider1_I, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(Check_op5_I)
-                                            .addComponent(Check_op6_I))
-                                        .addGap(81, 81, 81)
-                                        .addComponent(Spinner1_I, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE))))
+                                .addComponent(Slider1_I, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(202, 202, 202)
-                                .addComponent(Texto_correo1_I)
-                                .addGap(44, 44, 44)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(Combobox1_I, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(Boton_toggle1_I)
-                                        .addGap(56, 56, 56))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(Campo_texto_correo1_I, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE)))))))
+                                    .addComponent(Check_op5_I)
+                                    .addComponent(Check_op6_I))
+                                .addGap(81, 81, 81)
+                                .addComponent(Spinner1_I, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(216, 216, 216)
+                        .addComponent(Texto_correo1_I)
+                        .addGap(44, 44, 44)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Combobox1_I, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(Boton_toggle1_I)
+                                .addGap(56, 56, 56))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Campo_texto_correo1_I, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jSeparator1))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -258,6 +294,8 @@ public class Ventana extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(16, 16, 16)
                         .addComponent(Boton_toggle)))
+                .addGap(10, 10, 10)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -268,6 +306,9 @@ public class Ventana extends javax.swing.JFrame {
                     .addComponent(Slider1_I, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Campo_texto_inverso1_I, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addComponent(Boton_toggle1_I))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -288,11 +329,10 @@ public class Ventana extends javax.swing.JFrame {
                                 .addGap(15, 15, 15)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(Campo_texto_correo1_I, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Texto_correo1_I)))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addComponent(Boton_toggle1_I)))
-                .addContainerGap(82, Short.MAX_VALUE))
+                                    .addComponent(Texto_correo1_I))))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -304,24 +344,54 @@ public class Ventana extends javax.swing.JFrame {
     }//GEN-LAST:event_Radio_op1ActionPerformed
 
     private void Radio_op2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Radio_op2ActionPerformed
-         Radio_op2_I.setSelected(Radio_op2.isSelected());
+        Radio_op2_I.setSelected(Radio_op2.isSelected());
     }//GEN-LAST:event_Radio_op2ActionPerformed
 
     private void Radio_op3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Radio_op3ActionPerformed
-         Radio_op3_I.setSelected(Radio_op3.isSelected());
+        Radio_op3_I.setSelected(Radio_op3.isSelected());
     }//GEN-LAST:event_Radio_op3ActionPerformed
 
     private void Check_op4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Check_op4ActionPerformed
-        // TODO add your handling code here:
+        Check_op4_I.setSelected(Check_op4.isSelected());
     }//GEN-LAST:event_Check_op4ActionPerformed
 
     private void Check_op5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Check_op5ActionPerformed
-        // TODO add your handling code here:
+        Check_op5_I.setSelected(Check_op5.isSelected());
     }//GEN-LAST:event_Check_op5ActionPerformed
 
     private void Check_op6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Check_op6ActionPerformed
-        // TODO add your handling code here:
+        Check_op6_I.setSelected(Check_op6.isSelected());
     }//GEN-LAST:event_Check_op6ActionPerformed
+
+    private void Campo_texto_correoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Campo_texto_correoActionPerformed
+
+    }//GEN-LAST:event_Campo_texto_correoActionPerformed
+
+    private void Campo_texto_correoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Campo_texto_correoKeyTyped
+
+        Campo_texto_correo1_I.setText(Campo_texto_correo.getText());
+    }//GEN-LAST:event_Campo_texto_correoKeyTyped
+
+    private void Boton_toggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_toggleActionPerformed
+        Boton_toggle1_I.setSelected(Boton_toggle.isSelected());
+        ImageIcon imagen_activada = new ImageIcon("./b_on.png");
+        ImageIcon imagen_desactivada = new ImageIcon("C:\\Users\\DAM2_09\\Documents\\GitHub\\pr-ctica-2-4-elementos-interfaz-mixta-Willsongamf\\SOL\\Practica2-4\\src\\Practica\\b_off.png");
+        if (Boton_toggle.isSelected()) {
+            Boton_toggle.setIcon(imagen_activada);
+            Boton_toggle1_I.setIcon(imagen_activada);
+        } else {
+            Boton_toggle.setIcon(imagen_desactivada);
+            Boton_toggle1_I.setIcon(imagen_desactivada);
+        }
+
+
+    }//GEN-LAST:event_Boton_toggleActionPerformed
+
+    private void Campo_texto_inversoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Campo_texto_inversoKeyTyped
+        String inverso = "";
+        inverso = Campo_texto_correo.getText() + inverso;
+        Campo_texto_correo1_I.setText(inverso);
+    }//GEN-LAST:event_Campo_texto_inversoKeyTyped
 
     /**
      * @param args the command line arguments
@@ -387,5 +457,7 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JLabel Texto_correo1_I;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }
