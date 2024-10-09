@@ -1,5 +1,7 @@
 package Practica;
 
+import java.awt.Color;
+import javax.swing.BorderFactory;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.border.Border;
@@ -433,6 +435,14 @@ public class Ventana extends javax.swing.JFrame {
     }//GEN-LAST:event_Campo_texto_inversoKeyTyped
 
     private void Campo_texto_correoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Campo_texto_correoKeyReleased
+        Border borde = BorderFactory.createLineBorder(Color.red);
+        
+        if(!Campo_texto_correo.getText().matches("'*'@gmail.com'*'")){
+            Campo_texto_correo.setBorder(borde);
+        }else{
+            Campo_texto_correo.setBorder(null);
+        }
+        
         Campo_texto_correo1_I.setText(Campo_texto_correo.getText());
     }//GEN-LAST:event_Campo_texto_correoKeyReleased
 
