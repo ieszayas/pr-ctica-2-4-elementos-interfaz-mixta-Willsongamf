@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/miNryp3D)
 # Práctica 2.4 – Elementos interfaz mixta
 
 Crea un proyecto llamado *practica2-4* en la carpeta SOL de github. Puedes utilizar *branches* para delimitar los cambios que vayas haciendo.
@@ -33,12 +34,12 @@ Mejora el ejercicio anterior agregando una **validación** en tiempo real del ca
 
 | ID Caso Prueba | Descripción Caso de Prueba               | Entrada                          | Salida Esperada                                                                 | Resultado   |
 |----------------|-----------------------------------------|----------------------------------|---------------------------------------------------------------------------------|-------------|
-| 01             | Verificar campos de texto (JTextField)  | Escribir texto en los campos     | Se duplican en la otra mitad                                                     | OK/No cumple|
-| 02             | Verificar Radio Buttons (JRadiobutton)   | Modificar Radio buttons          | Se duplican en la otra mitad                                                     | OK/No cumple|
-| 03             | Verificar Check Buttons (JCheckbox)      | Modificar Check Box              | Se duplican en la otra mitad                                                     | OK/No cumple|
-| 04             | Verificar Listado (JCombobox)            | Modificar Combobox               | Se duplican en la otra mitad                                                     | OK/No cumple|
-| 05             | Verificar Spinner (JSpinner)             | Modificar Spinner                | Se duplican en la otra mitad                                                     | OK/No cumple|
-| 06             | Verificar Barra deslizadora              | Deslizar barra                   | Se duplican en la otra mitad                                                     | OK/No cumple|
-| 07             | Verificar Toggle Botón (JToggleButton)   | Pulsar botón                     | Se duplican en la otra mitad                                                     | OK/No cumple|
-| 08             | Validación campo correo                  | Escribir un correo electrónico en formato incorrecto | Se muestra un borde en color rojo hasta que su formato sea correcto. | OK/No cumple|
-| 09             | Validación campo correo                  | Escribir un correo electrónico usando su formato con @ | Se valida mostrando un icono verde y un mensaje en la barra de estado. | OK/No cumple|
+| 01             | Verificar campos de texto (JTextField)  | Escribir texto en los campos     | Se duplican en la otra mitad                                                     | OK|
+| 02             | Verificar Radio Buttons (JRadiobutton)   | Modificar Radio buttons          | Se duplican en la otra mitad                                                     | OK|
+| 03             | Verificar Check Buttons (JCheckbox)      | Modificar Check Box              | Se duplican en la otra mitad                                                     | OK|
+| 04             | Verificar Listado (JCombobox)            | Modificar Combobox               | Se duplican en la otra mitad                                                     | OK|
+| 05             | Verificar Spinner (JSpinner)             | Modificar Spinner                | Se duplican en la otra mitad                                                     | OK|
+| 06             | Verificar Barra deslizadora              | Deslizar barra                   | Se duplican en la otra mitad                                                     | OK|
+| 07             | Verificar Toggle Botón (JToggleButton)   | Pulsar botón                     | Se duplican en la otra mitad                                                     | OK|
+| 08             | Validación campo correo                  | Escribir un correo electrónico en formato incorrecto | Se muestra un borde en color rojo hasta que su formato sea correcto. | OK|
+| 09             | Validación campo correo                  | Escribir un correo electrónico usando su formato con @ | Se valida mostrando un icono verde y un mensaje en la barra de estado. | OK|
