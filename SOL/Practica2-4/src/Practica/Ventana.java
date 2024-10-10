@@ -4,12 +4,14 @@ import java.awt.Color;
 import javax.swing.BorderFactory;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.border.Border;
 
 public class Ventana extends javax.swing.JFrame {
 
     public Ventana() {
         initComponents();
+        Imagen_tick.setVisible(false);
 
         buttonGroup1.add(Radio_op1);
         buttonGroup1.add(Radio_op2);
@@ -58,6 +60,7 @@ public class Ventana extends javax.swing.JFrame {
         Check_op5_I = new javax.swing.JCheckBox();
         Check_op6_I = new javax.swing.JCheckBox();
         Validacion_Panel = new javax.swing.JPanel();
+        Tetxo_Confirmacion = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         Imagen_tick = new javax.swing.JLabel();
 
@@ -143,7 +146,7 @@ public class Ventana extends javax.swing.JFrame {
             }
         });
 
-        Boton_toggle.setIcon(new javax.swing.ImageIcon("C:\\Users\\DAM2_09\\Documents\\GitHub\\pr-ctica-2-4-elementos-interfaz-mixta-Willsongamf\\b_off.png")); // NOI18N
+        Boton_toggle.setIcon(new javax.swing.ImageIcon("C:\\Users\\calvo\\OneDrive\\Documentos\\GitHub\\pr-ctica-2-4-elementos-interfaz-mixta-Willsongamf\\SOL\\Practica2-4\\Imagenes\\b_off.png")); // NOI18N
         Boton_toggle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Boton_toggleActionPerformed(evt);
@@ -169,7 +172,7 @@ public class Ventana extends javax.swing.JFrame {
 
         Slider1_I.setEnabled(false);
 
-        Boton_toggle1_I.setIcon(new javax.swing.ImageIcon("C:\\Users\\DAM2_09\\Documents\\GitHub\\pr-ctica-2-4-elementos-interfaz-mixta-Willsongamf\\SOL\\Practica2-4\\Imagenes\\b_off.png")); // NOI18N
+        Boton_toggle1_I.setIcon(new javax.swing.ImageIcon("C:\\Users\\calvo\\OneDrive\\Documentos\\GitHub\\pr-ctica-2-4-elementos-interfaz-mixta-Willsongamf\\SOL\\Practica2-4\\Imagenes\\b_off.png")); // NOI18N
         Boton_toggle1_I.setEnabled(false);
 
         Spinner1_I.setEnabled(false);
@@ -202,14 +205,21 @@ public class Ventana extends javax.swing.JFrame {
         Validacion_Panel.setLayout(Validacion_PanelLayout);
         Validacion_PanelLayout.setHorizontalGroup(
             Validacion_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 630, Short.MAX_VALUE)
+            .addGroup(Validacion_PanelLayout.createSequentialGroup()
+                .addGap(282, 282, 282)
+                .addComponent(Tetxo_Confirmacion)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         Validacion_PanelLayout.setVerticalGroup(
             Validacion_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 38, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Validacion_PanelLayout.createSequentialGroup()
+                .addContainerGap(20, Short.MAX_VALUE)
+                .addComponent(Tetxo_Confirmacion)
+                .addContainerGap())
         );
 
-        Imagen_tick.setText("jLabel1");
+        Imagen_tick.setIcon(new javax.swing.ImageIcon("C:\\Users\\calvo\\OneDrive\\Documentos\\GitHub\\pr-ctica-2-4-elementos-interfaz-mixta-Willsongamf\\SOL\\Practica2-4\\Imagenes\\descargar.jpg")); // NOI18N
+        Imagen_tick.setDisabledIcon(null);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -220,14 +230,13 @@ public class Ventana extends javax.swing.JFrame {
                 .addComponent(Texto_correo)
                 .addGap(44, 44, 44)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Boton_toggle)
-                        .addGap(56, 56, 56))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Campo_texto_correo, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addComponent(Combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Campo_texto_correo, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Boton_toggle)
+                    .addComponent(Imagen_tick))
+                .addGap(34, 34, 34))
             .addGroup(layout.createSequentialGroup()
                 .addGap(216, 216, 216)
                 .addComponent(Texto_correo1_I)
@@ -240,8 +249,6 @@ public class Ventana extends javax.swing.JFrame {
                         .addGap(56, 56, 56))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(Campo_texto_correo1_I, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Imagen_tick)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(14, 14, 14)
@@ -291,8 +298,8 @@ public class Ventana extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jSeparator1))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Validacion_Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(Validacion_Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -313,28 +320,34 @@ public class Ventana extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(12, 12, 12)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Radio_op2)
-                                    .addComponent(Check_op5)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(12, 12, 12)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(Radio_op2)
+                                            .addComponent(Check_op5)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(9, 9, 9)
+                                        .addComponent(Spinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Radio_op3)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(Check_op6)
+                                            .addComponent(Combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(39, 39, 39)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(Campo_texto_correo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(Texto_correo)))))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(Spinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(16, 16, 16)
+                                .addComponent(Boton_toggle)))
+                        .addGap(10, 10, 10))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Radio_op3)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(Check_op6)
-                                    .addComponent(Combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(15, 15, 15)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(Campo_texto_correo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Texto_correo)))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addComponent(Boton_toggle)))
-                .addGap(10, 10, 10)
+                        .addComponent(Imagen_tick)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -346,9 +359,6 @@ public class Ventana extends javax.swing.JFrame {
                     .addComponent(Slider1_I, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Campo_texto_inverso1_I, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addComponent(Boton_toggle1_I))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -369,10 +379,14 @@ public class Ventana extends javax.swing.JFrame {
                                 .addGap(15, 15, 15)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(Campo_texto_correo1_I, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Texto_correo1_I)
-                                    .addComponent(Imagen_tick))))))
-                .addGap(18, 18, 18)
-                .addComponent(Validacion_Panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(Texto_correo1_I))))
+                        .addGap(51, 51, 51))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addComponent(Boton_toggle1_I)
+                        .addGap(32, 32, 32)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Validacion_Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -409,9 +423,8 @@ public class Ventana extends javax.swing.JFrame {
     }//GEN-LAST:event_Campo_texto_correoActionPerformed
 
     private void Campo_texto_correoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Campo_texto_correoKeyTyped
-     
-        
-       
+
+
     }//GEN-LAST:event_Campo_texto_correoKeyTyped
 
     private void Boton_toggleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_toggleActionPerformed
@@ -430,19 +443,22 @@ public class Ventana extends javax.swing.JFrame {
     }//GEN-LAST:event_Boton_toggleActionPerformed
 
     private void Campo_texto_inversoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Campo_texto_inversoKeyTyped
-       
-       
+
+
     }//GEN-LAST:event_Campo_texto_inversoKeyTyped
 
     private void Campo_texto_correoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Campo_texto_correoKeyReleased
         Border borde = BorderFactory.createLineBorder(Color.red);
-        
-        if(!Campo_texto_correo.getText().matches("'*'@gmail.com'*'")){
+        Validacion_Panel.add(new JLabel("Valdio"));
+        if (!Campo_texto_correo.getText().matches("^[\\w-.]+@([\\w-]+.)+[\\w-]{3,4}$")) {
             Campo_texto_correo.setBorder(borde);
-        }else{
+            Imagen_tick.setVisible(false);
+        } else {
+            Imagen_tick.setVisible(true);
             Campo_texto_correo.setBorder(null);
+            Tetxo_Confirmacion.setText("Correo Valido");
         }
-        
+
         Campo_texto_correo1_I.setText(Campo_texto_correo.getText());
     }//GEN-LAST:event_Campo_texto_correoKeyReleased
 
@@ -459,7 +475,7 @@ public class Ventana extends javax.swing.JFrame {
     }//GEN-LAST:event_ComboboxActionPerformed
 
     private void SpinnerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SpinnerMouseClicked
-      
+
     }//GEN-LAST:event_SpinnerMouseClicked
 
     private void SpinnerStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_SpinnerStateChanged
@@ -467,7 +483,7 @@ public class Ventana extends javax.swing.JFrame {
     }//GEN-LAST:event_SpinnerStateChanged
 
     private void SliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_SliderStateChanged
-      Slider1_I.setValue(Slider.getValue());
+        Slider1_I.setValue(Slider.getValue());
     }//GEN-LAST:event_SliderStateChanged
 
     /**
@@ -531,6 +547,7 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JSlider Slider1_I;
     private javax.swing.JSpinner Spinner;
     private javax.swing.JSpinner Spinner1_I;
+    private javax.swing.JLabel Tetxo_Confirmacion;
     private javax.swing.JLabel Texto_correo;
     private javax.swing.JLabel Texto_correo1_I;
     private javax.swing.JPanel Validacion_Panel;
