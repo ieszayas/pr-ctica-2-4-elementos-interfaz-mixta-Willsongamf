@@ -146,7 +146,7 @@ public class Ventana extends javax.swing.JFrame {
             }
         });
 
-        Boton_toggle.setIcon(new javax.swing.ImageIcon("C:\\Users\\calvo\\OneDrive\\Documentos\\GitHub\\pr-ctica-2-4-elementos-interfaz-mixta-Willsongamf\\SOL\\Practica2-4\\Imagenes\\b_off.png")); // NOI18N
+        Boton_toggle.setIcon(new javax.swing.ImageIcon("C:\\Users\\DAM2_09\\Documents\\GitHub\\pr-ctica-2-4-elementos-interfaz-mixta-Willsongamf\\SOL\\Practica2-4\\Imagenes\\b_off.png")); // NOI18N
         Boton_toggle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Boton_toggleActionPerformed(evt);
@@ -172,7 +172,7 @@ public class Ventana extends javax.swing.JFrame {
 
         Slider1_I.setEnabled(false);
 
-        Boton_toggle1_I.setIcon(new javax.swing.ImageIcon("C:\\Users\\calvo\\OneDrive\\Documentos\\GitHub\\pr-ctica-2-4-elementos-interfaz-mixta-Willsongamf\\SOL\\Practica2-4\\Imagenes\\b_off.png")); // NOI18N
+        Boton_toggle1_I.setIcon(new javax.swing.ImageIcon("C:\\Users\\DAM2_09\\Documents\\GitHub\\pr-ctica-2-4-elementos-interfaz-mixta-Willsongamf\\SOL\\Practica2-4\\Imagenes\\b_off.png")); // NOI18N
         Boton_toggle1_I.setEnabled(false);
 
         Spinner1_I.setEnabled(false);
@@ -218,8 +218,7 @@ public class Ventana extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        Imagen_tick.setIcon(new javax.swing.ImageIcon("C:\\Users\\calvo\\OneDrive\\Documentos\\GitHub\\pr-ctica-2-4-elementos-interfaz-mixta-Willsongamf\\SOL\\Practica2-4\\Imagenes\\descargar.jpg")); // NOI18N
-        Imagen_tick.setDisabledIcon(null);
+        Imagen_tick.setIcon(new javax.swing.ImageIcon("C:\\Users\\DAM2_09\\Documents\\GitHub\\pr-ctica-2-4-elementos-interfaz-mixta-Willsongamf\\SOL\\Practica2-4\\Imagenes\\descargar.jpg")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -228,15 +227,19 @@ public class Ventana extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(304, 304, 304)
                 .addComponent(Texto_correo)
-                .addGap(44, 44, 44)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Campo_texto_correo, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Boton_toggle)
-                    .addComponent(Imagen_tick))
-                .addGap(34, 34, 34))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addComponent(Combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Boton_toggle)
+                            .addComponent(Imagen_tick))
+                        .addGap(34, 34, 34))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(Campo_texto_correo, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(216, 216, 216)
                 .addComponent(Texto_correo1_I)
@@ -379,13 +382,11 @@ public class Ventana extends javax.swing.JFrame {
                                 .addGap(15, 15, 15)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(Campo_texto_correo1_I, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Texto_correo1_I))))
-                        .addGap(51, 51, 51))
+                                    .addComponent(Texto_correo1_I)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(16, 16, 16)
-                        .addComponent(Boton_toggle1_I)
-                        .addGap(32, 32, 32)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Boton_toggle1_I)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                 .addComponent(Validacion_Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );

@@ -32,17 +32,23 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="304" max="-2" attributes="0"/>
               <Component id="Texto_correo" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Combobox" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="Campo_texto_correo" alignment="0" min="-2" pref="181" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                      <Component id="Combobox" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="61" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Boton_toggle" min="-2" max="-2" attributes="0"/>
+                          <Component id="Imagen_tick" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                      <Component id="Campo_texto_correo" min="-2" pref="181" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Boton_toggle" min="-2" max="-2" attributes="0"/>
-                  <Component id="Imagen_tick" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="216" max="-2" attributes="0"/>
@@ -236,15 +242,13 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                       <Component id="Boton_toggle1_I" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="51" max="32767" attributes="0"/>
               <Component id="Validacion_Panel" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -344,7 +348,7 @@
     <Component class="javax.swing.JToggleButton" name="Boton_toggle">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\calvo\OneDrive\Documentos\GitHub\pr-ctica-2-4-elementos-interfaz-mixta-Willsongamf\SOL\Practica2-4\Imagenes\b_off.png"/>
+          <Image iconType="2" name="C:\Users\DAM2_09\Documents\GitHub\pr-ctica-2-4-elementos-interfaz-mixta-Willsongamf\SOL\Practica2-4\Imagenes\b_off.png"/>
         </Property>
       </Properties>
       <Events>
@@ -387,7 +391,7 @@
     <Component class="javax.swing.JToggleButton" name="Boton_toggle1_I">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\calvo\OneDrive\Documentos\GitHub\pr-ctica-2-4-elementos-interfaz-mixta-Willsongamf\SOL\Practica2-4\Imagenes\b_off.png"/>
+          <Image iconType="2" name="C:\Users\DAM2_09\Documents\GitHub\pr-ctica-2-4-elementos-interfaz-mixta-Willsongamf\SOL\Practica2-4\Imagenes\b_off.png"/>
         </Property>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
@@ -482,10 +486,7 @@
     <Component class="javax.swing.JLabel" name="Imagen_tick">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\calvo\OneDrive\Documentos\GitHub\pr-ctica-2-4-elementos-interfaz-mixta-Willsongamf\SOL\Practica2-4\Imagenes\descargar.jpg"/>
-        </Property>
-        <Property name="disabledIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="0" name="null"/>
+          <Image iconType="2" name="C:\Users\DAM2_09\Documents\GitHub\pr-ctica-2-4-elementos-interfaz-mixta-Willsongamf\SOL\Practica2-4\Imagenes\descargar.jpg"/>
         </Property>
       </Properties>
     </Component>
